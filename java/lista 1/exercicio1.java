@@ -19,10 +19,9 @@ public class exercicio1
         } while (input >= 0);      
         scan.close();
         
-        if (qtt > 0) {
+        if (qtt > 0)
             System.out.println("Media = " + (double) total / qtt);
-        } else {
+        else
             System.out.println("Nenhum valor válido inserido.");
-        }
     }
 }

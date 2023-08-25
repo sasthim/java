@@ -16,17 +16,21 @@ public class exercicio2 {
             System.out.println("[0] Sair");
 
             input = scan.nextInt();
-            if (input >= 0 && input <= 6) {
+
+            if (input >= 0 && input <= 6) 
+            {
                 if (input == 0)
                     break;
-
                 else
                     votos[input - 1]++;
-            } else
+            }
+            else
                 System.out.println("Valor invalido, tente novamente.");
         } while (true);
+        
         for (int i=0; i<6; i++)
             System.out.println("Candidato ["+(i+1)+"]"+"= "+votos[i]+" votos.");
+    
         scan.close();
     }
 }
