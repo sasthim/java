@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class exercicio1
+public class exercicio3
 {
-    public static void imprimiAlunos(int[] codigo, double[] media)
+    public static void imprimiAlunos(int[] codigo, double[] media, int tamanho)
     {
-        for(int i=0; i<codigo.lenght;i++)
+        for(int i=0; i<tamanho;i++)
         {
             System.out.println("----------------------");
-            System.out.println("Aluno "+i);
+            System.out.println("Aluno "+(i+1));
             System.out.println("Codigo "+codigo[i]);
             System.out.println("Media: "+media[i]);
         }
@@ -15,8 +15,9 @@ public class exercicio1
     }
     public static void main (String[] args)
     {
-        int[] codigo;
-        int[] media;
+        int maximoAlunos = 100;
+        int[] codigo = new int[maximoAlunos];       //  Queria evitar o uso de memoria desnecessária, pensei em alocação dinamica mas nao é tao simples em java 
+        double[] media = new double[maximoAlunos];
         int i = 0, input, tempNota;
         Scanner scan = new Scanner(System.in);
         do {
@@ -37,12 +38,12 @@ public class exercicio1
                 tempNota += scan.nextInt();
                 System.out.println("Insira a terceira nota: ");
                 tempNota += scan.nextInt();
-                media[i] = tempNota/3
+                media[i] = tempNota/3;
             }
             i++;
         } while (true);
 
         scan.close();
-        imprimiAlunos();
+        imprimiAlunos(codigo, media, i);
     }
 }
