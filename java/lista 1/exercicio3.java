@@ -1,12 +1,3 @@
-/*3) Escreva um algoritmo que calcule a média aritmética das 3 notas dos alunos de uma classe.
-O algoritmo deverá ler, além das notas, o código do aluno e deverá ser encerrado quando o
-código for igual a zero.
-
-pedir o codigo do aluno
--caso 0 -> encerrar
--else -> pede as 3 notas e calcula media
-*/
-
 import java.util.Scanner;
 
 public class exercicio1
@@ -24,19 +15,33 @@ public class exercicio1
     }
     public static void main (String[] args)
     {
-        int input;
+        int[] codigo;
+        int[] media;
+        int i = 0, input, tempNota;
         Scanner scan = new Scanner(System.in);
-
         do {
+            input = 0;
+            tempNota = 0;
+
             System.out.println("Insira o codigo do aluno (0 para terminar):");
             input = scan.nextInt();
+
             if (input == 0)
                 break;
             else
             {
-                
+                codigo[i] = input;
+                System.out.println("Insira a primeira nota: ");
+                tempNota += scan.nextInt();
+                System.out.println("Insira a segunda nota: ");
+                tempNota += scan.nextInt();
+                System.out.println("Insira a terceira nota: ");
+                tempNota += scan.nextInt();
+                media[i] = tempNota/3
             }
-        } while (input >= 0);
+            i++;
+        } while (true);
+
         scan.close();
         imprimiAlunos();
     }
