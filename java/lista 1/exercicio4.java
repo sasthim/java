@@ -5,7 +5,8 @@
 
 import java.util.Scanner;
 
-public class exercicio4 {
+public class exercicio4 
+{
     public static void main(String[] args) {
         double media;
         int input, temp = 0, qtt = 0;

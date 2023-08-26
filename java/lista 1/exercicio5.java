@@ -5,7 +5,8 @@
 
 import java.util.Scanner;
 
-public class exercicio5 {
+public class exercicio5 
+{
     public static void main(String[] args)
     {
         int tamanho = 5, soma = 0, mult = 1;
