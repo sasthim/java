@@ -1,3 +1,8 @@
+/*
+    1) Construir um algoritmo que calcule a média aritmética de vários valores inteiros positivos. 
+       O final da leitura acontecerá quando for lido um valor negativo.
+ */
+
 import java.util.Scanner;
 
 public class exercicio1

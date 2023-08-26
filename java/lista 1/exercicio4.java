@@ -1,3 +1,8 @@
+/*
+    4) Escreva um algoritmo que calcule a média dos números digitados pelo usuário, se eles forem
+       pares. Termine a leitura se o usuário digitar zero (0).
+ */
+
 import java.util.Scanner;
 
 public class exercicio4 {
