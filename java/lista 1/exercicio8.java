@@ -13,8 +13,8 @@ import java.util.Scanner;
 
 public class exercicio8 {
     public static void main(String[] args) {
-        int mediaIdadeGrupo = 0, mediaAlturaMulheres = 0, mediaIdadeHomens = 0, qttH = 0, qttM = 0, qtt = 0, input,
-                habitantes = 1000;
+        int  qttH = 0, qttM = 0, qtt = 0, input, habitantes = 1000;
+        double mediaIdadeGrupo = 0, mediaAlturaMulheres = 0, mediaIdadeHomens = 0;
         int[] sexo = new int[habitantes];
         int[] idade = new int[habitantes];
         int[] altura = new int[habitantes];
