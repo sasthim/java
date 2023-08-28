@@ -7,23 +7,37 @@
 
 import java.util.Scanner;
 
-public class exercicio7 
-{
-    public static int[] cadastrar()
-    {
+public class exercicio7 {
+    public static void main(String[] args) {
+        double input, aumento = 0.2;
+        int qtt = 0, maxProdutos = 100;
+        int[] codigo = new int[maxProdutos];
+        double[] valorAntigo = new double[maxProdutos];
+        double[] valorNovo = new double[maxProdutos];
         Scanner scan = new Scanner(System.in);
-        int[] produto = new int[2];
 
-        System.out.println("Digite o codigo do produto:");
-        produto[0] = scan.nextInt();
-        System.out.println("Digite o preco do produto:");
-        produto[1] = scan.nextInt();
+        for (int i = 0; i < maxProdutos; i++) {
+            System.out.println("Digite o codigo do produto (negativo para sair): ");
+            input = scan.nextDouble();
+            if (input < 0)
+                break;
+            codigo[i] = (int) input;
 
-        return produto;
-    }
-    
-    public static void main (String[] args)
-    {
-        Scanner scan = new Scanner(System.in);
+            System.out.println("Digite o preco do produto: ");
+            valorAntigo[i] = scan.nextDouble();
+            qtt++;
+        }
+
+        scan.close();
+
+        for (int i = 0; i < qtt; i++) {
+            valorNovo[i] = valorAntigo[i] * (1 + aumento);
+            System.out.println("--------------------------");
+            System.out.println("Codigo: " + codigo[i]);
+            System.out.println("Preco original: " + valorAntigo[i]);
+            System.out.println("Preco atualizado: " + valorNovo[i]);
+        }
+        System.out.println("--------------------------");
+        scan.close();
     }
 }
