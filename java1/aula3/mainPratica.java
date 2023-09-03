@@ -51,12 +51,12 @@ public class mainPratica
 
     public static double conversaoTemp (double x, char c)
     {
-        double resultado;
+        double resultado = 0;
 
         if (c == 'c')
         resultado = (9 * x)/5 + 32;
         else if (c == 'f')
-        resultado = (x - 32) * (5/9);
+        resultado = (x - 32) * 5 / 9;
 
         return resultado;
     }
@@ -89,12 +89,14 @@ public class mainPratica
                 caractere = scan.next().charAt(0);
                 System.out.println("Resultado: " + calculadora(x, y, caractere));
                 break;
+
             case 2:
                 System.out.println("Digite o numero a ser vericado:");
                 z = scan.nextInt();
                 scan.nextLine();
                 System.out.println("Resultado: " + isPair(z));
                 break;
+
             case 3:
                 System.out.println("Digite a frase(string):");
                 scan.nextLine();
@@ -103,27 +105,27 @@ public class mainPratica
                 caractere = scan.next().charAt(0);
                 System.out.println("Resultado: " + contadorChar(frase, caractere));
                 break;
-            case 4:
-            System.out.println("[1] Celsius para Fahrenheint");
-            System.out.println("[2] Fahrenheint para celsius");
-            opcao = scan.nextInt();
-            
-            if(opcao == 1)
-            {
-                caractere = 'c';
-                System.out.println("Digite a temperatura em graus celsius: ");
-                x = scan.nextDouble();
-                System.out.println("Resultado: " + conversaoTemp(x, caractere) + " F");
-            }
-            else if (opcao == 2)
-            {
-                caractere = 'f';
-                System.out.println("Digite a temperatura em fahrenheint: ");
-                x = scan.nextDouble();
-                System.out.println("Resultado: " + conversaoTemp(x, caractere) + " C");
-            }
-        }
 
+            case 4:
+                System.out.println("[1] Celsius para Fahrenheint");
+                System.out.println("[2] Fahrenheint para celsius");
+                opcao = scan.nextInt();
+                
+                if(opcao == 1)
+                {
+                    caractere = 'c';
+                    System.out.println("Digite a temperatura em graus celsius: ");
+                    x = scan.nextDouble();
+                    System.out.println("Resultado: " + conversaoTemp(x, caractere) + " F");
+                }
+                else if (opcao == 2)
+                {
+                    caractere = 'f';
+                    System.out.println("Digite a temperatura em fahrenheint: ");
+                    x = scan.nextDouble();
+                    System.out.println("Resultado: " + conversaoTemp(x, caractere) + " C");
+                }
+        }
         scan.close();
     }
 }
