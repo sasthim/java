@@ -49,9 +49,15 @@ public class mainPratica
         return resultado;
     }
 
-    public static double convertCelsius (double x)
+    public static double conversaoTemp (double x, char c)
     {
-        double resultado = (9 * x)/5 + 32;
+        double resultado;
+
+        if (c == 'c')
+        resultado = (9 * x)/5 + 32;
+        else if (c == 'f')
+        resultado = (x - 32) * (5/9);
+
         return resultado;
     }
 
@@ -98,9 +104,24 @@ public class mainPratica
                 System.out.println("Resultado: " + contadorChar(frase, caractere));
                 break;
             case 4:
+            System.out.println("[1] Celsius para Fahrenheint");
+            System.out.println("[2] Fahrenheint para celsius");
+            opcao = scan.nextInt();
+            
+            if(opcao == 1)
+            {
+                caractere = 'c';
                 System.out.println("Digite a temperatura em graus celsius: ");
                 x = scan.nextDouble();
-                System.out.println("Resultado: " + convertCelsius(x) + " F");
+                System.out.println("Resultado: " + conversaoTemp(x, caractere) + " F");
+            }
+            else if (opcao == 2)
+            {
+                caractere = 'f';
+                System.out.println("Digite a temperatura em fahrenheint: ");
+                x = scan.nextDouble();
+                System.out.println("Resultado: " + conversaoTemp(x, caractere) + " C");
+            }
         }
 
         scan.close();
