@@ -2,7 +2,7 @@ package java1.aula3;
 
 import java.util.Scanner;
 
-public class mainPratica
+public class funcoes1
 {
     public static double calculadora (double x, double y, char operador)
     {
