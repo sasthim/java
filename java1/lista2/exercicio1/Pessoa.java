@@ -39,10 +39,11 @@ public class Pessoa {
     }
 
     public String imprimir() {
-        return  "\n==============\n"+
+        return  "\n=============="+
                 "\nCPF: "+getCPF()+
                 "\nNome: "+getNome()+
                 "\nIdade: "+getIdade()+
-                "\nSexo: "+getSexo();
+                "\nSexo: "+getSexo()+
+                "\n==============\n";
     }
 }
