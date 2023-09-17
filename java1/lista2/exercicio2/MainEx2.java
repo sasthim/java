@@ -1,8 +1,8 @@
-package java1.lista2.exercicio1;
+package java1.lista2.exercicio2;
 
 import java.util.Scanner;
 
-public class MainEx1 {
+public class MainEx2 {
     public static void main(String[] args) {
         Aluno aluno = null;
         int opcao = 0;
@@ -20,10 +20,6 @@ public class MainEx1 {
             opcao = scan.nextInt();
             switch (opcao) {
                 case 1:
-                    String ra;
-                    String nome;
-                    float ac1, ac2, ag, af;
-
                     System.out.println("RA: ");
                     aluno.setRa(scan.next());
                     System.out.println("Nome: ");

@@ -5,6 +5,7 @@ public class Aluno {
     private String Nome;
     private float AC1;
     private float AC2;
+    private float AG;
     private float AF;
 
     public void setRa(String string) {
@@ -24,10 +25,10 @@ public class Aluno {
     }
 
     public void setAC1(float nota) {
-        this.AC2 = nota;
+        this.AC1 = nota;
     }
 
-    public int getAC1() {
+    public float getAC1() {
         return this.AC1;
     }
 
@@ -35,7 +36,7 @@ public class Aluno {
         this.AC2 = nota;
     }
 
-    public char getAC2() {
+    public float getAC2() {
         return this.AC2;
     }
 
@@ -43,7 +44,7 @@ public class Aluno {
         this.AG = nota;
     }
 
-    public char getAG() {
+    public float getAG() {
         return this.AG;
     }
 
@@ -51,12 +52,12 @@ public class Aluno {
         this.AF = nota;
     }
 
-    public char getAF() {
+    public float getAF() {
         return this.AF;
     }
 
-    public float calcularMedia() {
-        return (AC1*0.15)*(AC2*0.3)+(AG*0.1)+(AF*0.45);
+    public double calcularMedia() {
+        return (AC1*0.15)+(AC2*0.3)+(AG*0.1)+(AF*0.45);
     }
 
     public String verificarAprovacao() {
