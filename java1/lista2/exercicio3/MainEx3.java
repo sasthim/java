@@ -26,12 +26,18 @@ public class MainEx3 {
                     funcionario.setNome(scan.next());
                     System.out.println("Tipo de vinculo (H/N): ");
                     funcionario.setTipoVinculo(scan.next().charAt(0));
-                    System.out.println("Valor hora");
-                    funcionario.setValorHora(scan.nextFloat());
-                    System.out.println("Quantidade de horas");
-                    funcionario.setQtdeHora(scan.nextFloat());
-                    System.out.println("Salario");
-                    funcionario.setSalario(scan.nextFloat());
+
+                    if (funcionario.getTipoVinculo() == 'H') {
+                        System.out.println("Valor hora");
+                        funcionario.setValorHora(scan.nextFloat());
+                        System.out.println("Quantidade de horas");
+                        funcionario.setQtdeHora(scan.nextFloat());
+                    }
+                    else {
+                        System.out.println("Salario");
+                        funcionario.setSalario(scan.nextFloat());    
+                    }
+
                     System.out.println("Valor desconto");
                     funcionario.setValorDesconto(scan.nextFloat());
                     break;
