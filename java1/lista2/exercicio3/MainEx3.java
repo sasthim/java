@@ -25,19 +25,18 @@ public class MainEx1 {
                     System.out.println("Nome: ");
                     funcionario. = scan.next();
                     System.out.println("Tipo de vinculo (H/N): ");
-                    funcionario. = scan.next();
-                    System.out.println("");
-                    funcionario. = scan.next();
-                    System.out.println("");
-                    funcionario. = scan.next();
-                    System.out.println("");
-                    funcionario. = scan.next();
-                    System.out.println("");
-                    funcionario. = scan.next();
-                    
+                    funcionario. = scan.next().charAt(0);
+                    System.out.println("Valor hora");
+                    funcionario. = scan.nextFloat();
+                    System.out.println("Quantidade de horas");
+                    funcionario. = scan.nextFloat();
+                    System.out.println("Salario");
+                    funcionario. = scan.nextFloat();
+                    System.out.println("Valor desconto");
+                    funcionario. = scan.nextFloat();
                     break;
                 case 2:
-                    System.out.println(aluno.imprimir());
+                    System.out.println(funcionario.imprimir());
                     break;
                 case 3:
                     loop = false;
