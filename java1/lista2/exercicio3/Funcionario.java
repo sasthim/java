@@ -9,8 +9,8 @@ public class Funcionario {
     private float Salario;
     private float ValorDesconto;
 
-    public void setCracha(String string) {
-        this.Cracha = string;
+    public void setCracha(int valor) {
+        this.Cracha = valor;
     }
 
     public int getCracha() {
@@ -29,7 +29,7 @@ public class Funcionario {
         this.TipoVinculo = vinculo;
     }
 
-    public void getTipoVinculo() {
+    public char getTipoVinculo() {
         return this.TipoVinculo;
     }
 
@@ -45,7 +45,7 @@ public class Funcionario {
         this.QtdeHora = hora;
     }
 
-    public void getQtdeHora() {
+    public float getQtdeHora() {
         return this.QtdeHora;
     }
 
@@ -69,7 +69,7 @@ public class Funcionario {
         return ValorHora * QtdeHora;
     }
 
-    public CalcularValorReceber() {
+    public float CalcularValorReceber() {
         return Salario - ValorDesconto;
     }
 
@@ -78,8 +78,9 @@ public class Funcionario {
                "\nCracha: "+ getCracha()+
                "\nNome: "+ getNome()+
                "\nTipo vinculo: "+ getTipoVinculo()+
-               "\nSalario: "+ CalcularSalario();
+               "\nSalario: "+ CalcularSalario()+
                "\nDesconto: "+ getValorDesconto()+
-               "\nValor a receber: "+ CalcularValorReceber();
-    }
+               "\nValor a receber: "+ CalcularValorReceber()+
+               "\n###############";
+        }
 }

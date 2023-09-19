@@ -1,8 +1,8 @@
-package java1.lista2.exercicio1;
+package java1.lista2.exercicio3;
 
 import java.util.Scanner;
 
-public class MainEx1 {
+public class MainEx3 {
     public static void main(String[] args) {
         Funcionario funcionario = null;
         int opcao = 0;
@@ -21,19 +21,19 @@ public class MainEx1 {
             switch (opcao) {
                 case 1:
                     System.out.println("Cracha: ");
-                    funcionario. = scan.nextInt();
+                    funcionario.setCracha(scan.nextInt());
                     System.out.println("Nome: ");
-                    funcionario. = scan.next();
+                    funcionario.setNome(scan.next());
                     System.out.println("Tipo de vinculo (H/N): ");
-                    funcionario. = scan.next().charAt(0);
+                    funcionario.setTipoVinculo(scan.next().charAt(0));
                     System.out.println("Valor hora");
-                    funcionario. = scan.nextFloat();
+                    funcionario.setValorHora(scan.nextFloat());
                     System.out.println("Quantidade de horas");
-                    funcionario. = scan.nextFloat();
+                    funcionario.setQtdeHora(scan.nextFloat());
                     System.out.println("Salario");
-                    funcionario. = scan.nextFloat();
+                    funcionario.setSalario(scan.nextFloat());
                     System.out.println("Valor desconto");
-                    funcionario. = scan.nextFloat();
+                    funcionario.setValorDesconto(scan.nextFloat());
                     break;
                 case 2:
                     System.out.println(funcionario.imprimir());
