@@ -26,7 +26,13 @@ public class Main {
                     lstAlunos.add(alu);
                     break;
                 case 2:
-                    String str = "";    
+                    String str = "";
+                    
+                    /*for(Aluno aluTmp : lstAlunos) {
+                        int i = 1;z
+                        str+= ....
+                    } */
+
                     for(int i = 0; i < lstAlunos.size(); i++)
                         str+= "Aluno "+(i+1)+lstAlunos.get(i).imprimir()+"\n\n";
                     JOptionPane.showMessageDialog(null, str, "Lista de alunos", 2);
