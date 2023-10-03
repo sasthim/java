@@ -14,6 +14,7 @@ public class Main {
         String nome;
 
         do {
+            // Mudar: 3- busca 4- remover 5- sair
             opt = Integer.parseInt(JOptionPane.showInputDialog("Menu\n\n[1] Criar aluno\n[2] Mostrar alunos\n[3] Sair"));
             
             switch(opt) {
