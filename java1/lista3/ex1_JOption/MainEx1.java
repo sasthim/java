@@ -9,12 +9,9 @@ public class MainEx1 {
         Apolice apolice = null;
         ArrayList<Apolice> lstApolice = new ArrayList<>();
 
-        // Integer[] options = {1, 2, 3};
         String[] menuOptions = { "[1] Criar apolice", "[2] Ver dados apolice", "[3] Buscar", "[4] Apagar", "[5] Sair" };
         String[] sexoOptions = { "Masculino", "Feminino" };
-
-        int opcao = 0;
-
+        
         int tmpNumero;
         String tmpNome;
         int tmpIdade;
@@ -29,10 +26,8 @@ public class MainEx1 {
              * System.out.println("[3] Sair");
              */
 
-            opcao = JOptionPane.showOptionDialog(null, "Digite a opcao desejada:",
-                    "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, menuOptions, null);
-
-            switch (opcao) {
+            switch (JOptionPane.showOptionDialog(null, "Digite a opcao desejada:",
+                    "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, menuOptions, null)) {
                 case 0:
                     apolice = new Apolice();
                     tmpNumero = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero:"));
