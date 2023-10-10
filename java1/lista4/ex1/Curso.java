@@ -45,7 +45,6 @@ public class Curso {
         return str;
     } */
 
-// foi mal se for má prática mas eu amo nao precisar colocar chaves em if/for de 1 linha
     public int getAluno(String ra) { 
         for(int i = 0; i < lstAlunos.size(); i++)
             if(ra == lstAlunos.get(i).getRa())
@@ -61,8 +60,8 @@ public class Curso {
 
     public String imprimirCompleto() {
         String str = "";
-        for(Aluno tmpAluno : lstAlunos)
-            str += "\n" + tmpAluno.imprimir();
+        for(int i = 0; i < lstAlunos.size(); i++)
+            str += "\nAluno "+ i +"\n" + lstAlunos.get(i).imprimir();
         return  imprimir()+str;
     }
 }

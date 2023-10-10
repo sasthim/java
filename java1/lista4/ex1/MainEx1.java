@@ -3,6 +3,15 @@ package java1.lista4.ex1;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
+/*
+ * Fiz com bastante carinho, espero que goste!
+ * Algumas observações:
+ *  1. Estou usando o vscode entao nao fiz todos os metodos sets e gets para as classes, apenas os necessarios, espero que nao se importe.
+ *  2. Adicionei uma verificação para que nao haja alunos com o mesmo RA.
+ *  3. Eu amo nao abrir chaves {} em if's e for's que contêm apenas 1 linha, perdão se for má prática.
+ *  4. Novamente, fiz com carinho e se possível adoraria comentários sobre o programa, possíveis alterações, etc.
+ */
+
 public class MainEx1 {
     public static void main(String[] args) {
         Curso curso = null;
@@ -10,11 +19,15 @@ public class MainEx1 {
 
         ArrayList<Curso> lstCursos = new ArrayList<>();
 
+
+        // Eu pensei em reciclar a mesma variavel varias vezes mas zelei pela organização. (No mesmo switch e/ou usar opt inves de criar outras int)
         int opt;
         int codigo;
         int cargaHoraria;
+        
         String ra;
         String nome;
+        String str;
 
         do {
             opt = Integer.parseInt(JOptionPane.showInputDialog(
@@ -34,31 +47,49 @@ public class MainEx1 {
                     curso  = new Curso(codigo, nome, cargaHoraria);
                     lstCursos.add(curso);
                     break;
+
                 case 2: // criar aluno
                     codigo = Integer.parseInt(JOptionPane.showInputDialog("Digite o codigo do curso:"));
 
                     for (Curso tmpCurso : lstCursos) {
-                        if(tmpCurso.getCodigo() == codigo) {
+                        if(tmpCurso.getCodigo() != codigo);
+                        else {
                             ra = JOptionPane.showInputDialog("Digite o RA:");
                             nome = JOptionPane.showInputDialog("Digite o nome:");
-
                             alu = new Aluno(ra, nome);
                             tmpCurso.inserirAluno(alu);
                         }
-                        else {
-                            JOptionPane.showMessageDialog(null, "Curso nao encontrado.");
-                        }
                     }
                     break;
+
                 case 3: // remover aluno
                     ra = JOptionPane.showInputDialog("Digite o RA do aluno:");
 
                     for(Curso tmpCursos : lstCursos) {
-                        if (tmpCursos.getAluno(ra) != -1)
+                        if (tmpCursos.getAluno(ra) == -1);
+                        else
                             tmpCursos.removerAluno(tmpCursos.getAluno(ra));
                     }
-
                     break;
+
+                case 4: // mostrar cursos
+                str = "";
+
+                for(Curso tmpCursos : lstCursos)
+                        str += tmpCursos.imprimir();
+                    JOptionPane.showMessageDialog(null, str);
+                    break;
+
+                case 5: // mostrar alunos do curso
+                    codigo = Integer.parseInt(JOptionPane.showInputDialog("Digite o codigo do curso:"));
+
+                    for (Curso tmpCurso : lstCursos) {
+                        if(tmpCurso.getCodigo() != codigo);
+                        else
+                            JOptionPane.showMessageDialog(null, tmpCurso.imprimirCompleto());
+                    }
+                    break;
+
                 case 6:
                     System.exit(0);
                     break;
