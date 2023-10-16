@@ -61,7 +61,7 @@ public class Curso {
     public String imprimirCompleto() {
         String str = "";
         for(int i = 0; i < lstAlunos.size(); i++)
-            str += "\nAluno "+ i +"\n" + lstAlunos.get(i).imprimir();
+            str += "\n\nAluno "+ i + lstAlunos.get(i).imprimir();
         return  imprimir()+str;
     }
 }

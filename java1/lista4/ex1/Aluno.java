@@ -5,7 +5,6 @@ public class Aluno {
     private String nome;
 
     public Aluno(){
-
     }
 
     public Aluno(String ra, String nome) {

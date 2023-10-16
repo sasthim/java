@@ -4,12 +4,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /*
- * Fiz com bastante carinho, espero que goste!
- * Algumas observações:
- *  1. Estou usando o vscode entao nao fiz todos os metodos sets e gets para as classes, apenas os necessarios, espero que nao se importe.
- *  2. Adicionei uma verificação para que nao haja alunos com o mesmo RA.
- *  3. Eu amo nao abrir chaves {} em if's e for's que contêm apenas 1 linha, perdão se for má prática.
- *  4. Novamente, fiz com carinho e se possível adoraria comentários sobre o programa, possíveis alterações, etc.
+ * Estou usando o vscode entao nao fiz todos os metodos sets e gets para as classes, apenas os necessarios, espero que nao se importe.
  */
 
 public class MainEx1 {
@@ -77,7 +72,7 @@ public class MainEx1 {
 
                 for(Curso tmpCursos : lstCursos)
                         str += tmpCursos.imprimir();
-                    JOptionPane.showMessageDialog(null, str);
+                    JOptionPane.showMessageDialog(null, str+"\n");
                     break;
 
                 case 5: // mostrar alunos do curso
