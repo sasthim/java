@@ -35,16 +35,6 @@ public class Curso {
         return this.lstAlunos.size();
     }
 
-    /* queria muito fazer assim (com vetor) mas mudei de ideia
-
-    public String[] getAlunos() {
-        String[] str = new String[lstAlunos.size()];
-
-        for(int i = 0; i < lstAlunos.size(); i++)
-            str[i] = lstAlunos.get(i).getRa();
-        return str;
-    } */
-
     public int getAluno(String ra) { 
         for(int i = 0; i < lstAlunos.size(); i++)
             if(ra == lstAlunos.get(i).getRa())
@@ -61,7 +51,7 @@ public class Curso {
     public String imprimirCompleto() {
         String str = "";
         for(int i = 0; i < lstAlunos.size(); i++)
-            str += "\n\nAluno "+ i + lstAlunos.get(i).imprimir();
+            str += "\n\nAluno "+ (i+1) + lstAlunos.get(i).imprimir();
         return  imprimir()+str;
     }
 }

@@ -14,8 +14,6 @@ public class MainEx1 {
 
         ArrayList<Curso> lstCursos = new ArrayList<>();
 
-
-        // Eu pensei em reciclar a mesma variavel varias vezes mas zelei pela organização. (No mesmo switch e/ou usar opt inves de criar outras int)
         int opt;
         int codigo;
         int cargaHoraria;
