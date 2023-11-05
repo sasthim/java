@@ -14,17 +14,6 @@ public class Main {
         return str;
     }
 
-    public static String listaProfessor(ArrayList<Pessoa> lstPessoas, Professor professor){
-        String str = "";
-
-        for(int i = 0; i < lstPessoas.size(); i++) {
-
-        }
-            
-
-        return str;
-    }
-
     public static void main(String[] args){
         Disciplina disciplina = null;
         Professor professor = null;
@@ -151,16 +140,16 @@ public class Main {
                     codigo = Integer.parseInt(JOptionPane.showInputDialog("Digite o cracha do funcionario: \n"));
 
                     for (Pessoa p : lstPessoas) {
-                        if(p instanceof Funcionario){
                             if(((Funcionario)p).getCracha() == codigo) {
                                 if(p instanceof Atendente)
-                                    ((Funcionario)p).setSalario(((Funcionario)p).getSalario() * 1.15);
-                                if(p instanceof Professor)
-                                    ((Funcionario)p).setSalario(((Funcionario)p).getSalario() * 2);
+                                    ((Atendente)p).bonificacao();
+
+                                else if(p instanceof Professor)
+                                    ((Professor)p).bonificacao();
+                                    
                                 else
-                                    ((Funcionario)p).setSalario(((Funcionario)p).getSalario() * 1.1);
+                                    ((Funcionario)p).bonificacao();
                             }
-                        }
                     }
                     break;
 

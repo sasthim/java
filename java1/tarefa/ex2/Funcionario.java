@@ -15,6 +15,7 @@ public class Funcionario extends Pessoa {
     }
 
     public void bonificacao(){
+        setSalario(salario * 1.1);
     }
 
     @Override

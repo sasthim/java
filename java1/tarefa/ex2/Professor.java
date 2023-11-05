@@ -15,8 +15,9 @@ public class Professor extends Funcionario{
         this.urlLattes = urlLattes;
     }
 
+    @Override
     public void bonificacao(){
-
+        setSalario(getSalario() * 2);
     }
 
     public void addDisciplina(Disciplina e){

@@ -16,7 +16,7 @@ public class Atendente extends Funcionario {
 
     @Override
     public void bonificacao() {
-
+        setSalario(getSalario() * 1.15);
     }
 
     @Override
